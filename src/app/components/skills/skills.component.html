@@ -1,0 +1,19 @@
+   <section class="skills-section section-padding">
+      <div class="container">
+        <h2 class="section-title text-center mb-12">Technical Skills</h2>
+        <div class="skills-grid">
+          <mat-card *ngFor="let skill of skills" class="skill-card">
+            <mat-card-header>
+              <mat-card-title>{{ skill.category }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="skill-chips">
+                <span *ngFor="let item of skill.items" class="skill-chip">
+                  {{ item }}
+                </span>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </section>

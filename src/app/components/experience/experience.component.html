@@ -1,0 +1,35 @@
+  <section class="experience-section section-padding">
+      <div class="container">
+        <h2 class="section-title text-center mb-12">Professional Experience</h2>
+        <div class="experience-timeline">
+          <mat-card *ngFor="let job of experience" class="experience-card">
+            <mat-card-header>
+              <div class="job-header">
+                <div class="job-info">
+                  <mat-card-title>{{ job.position }}</mat-card-title>
+                  <mat-card-subtitle class="company-name">{{ job.company }}</mat-card-subtitle>
+                </div>
+                <div class="job-meta">
+                  <div class="meta-item">
+                    <mat-icon>calendar_today</mat-icon>
+                    <span>{{ job.duration }}</span>
+                  </div>
+                  <div class="meta-item">
+                    <mat-icon>location_on</mat-icon>
+                    <span>{{ job.location }}</span>
+                  </div>
+                </div>
+              </div>
+            </mat-card-header>
+            <mat-card-content>
+              <ul class="achievements-list">
+                <li *ngFor="let achievement of job.achievements" class="achievement-item">
+                  <span class="achievement-bullet"></span>
+                  <span>{{ achievement }}</span>
+                </li>
+              </ul>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </section>

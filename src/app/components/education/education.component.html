@@ -1,0 +1,36 @@
+ <section class="education-section section-padding">
+      <div class="container">
+        <div class="education-grid">
+          <div class="education-column">
+            <h2 class="section-title mb-8">Education</h2>
+            <mat-card class="education-card" *ngIf="education">
+              <mat-card-header>
+                <mat-card-title>{{ education.degree }}</mat-card-title>
+                <mat-card-subtitle>{{ education.specialization }}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <div class="education-details">
+                  <p class="university">{{ education.university }}</p>
+                  <p class="location">{{ education.location }}</p>
+                  <p class="cgpa">CGPA: {{ education.cgpa }}</p>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+          <div class="certifications-column">
+            <h2 class="section-title mb-8">Certifications</h2>
+            <div class="certifications-list">
+              <mat-card *ngFor="let cert of certifications" class="certification-card">
+                <mat-card-content>
+                  <div class="certification-item">
+                    <span class="cert-bullet"></span>
+                    <span>{{ cert }}</span>
+                  </div>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,36 @@
+.contact-info-section {
+      background: #1e293b;
+      color: white;
+      padding: 2rem 0;
+    }
+
+    .contact-items {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+    }
+
+    .contact-item.clickable {
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .contact-item.clickable:hover {
+      color: #60a5fa;
+    }
+
+    @media (max-width: 768px) {
+      .contact-items {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    }

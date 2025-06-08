@@ -1,0 +1,62 @@
+   <section class="projects-section section-padding">
+      <div class="container">
+        <h2 class="section-title text-center mb-12">Featured Project</h2>
+        <div class="project-container" *ngFor="let project of projects">
+          <mat-card class="project-card">
+            <mat-card-header>
+              <mat-card-title>{{ project.title }}</mat-card-title>
+              <mat-card-subtitle>{{ project.description }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="tech-stack mb-4">
+                <span *ngFor="let tech of project.technologies" class="tech-chip">
+                  {{ tech }}
+                </span>
+              </div>
+
+              <h4 class="features-title">Key Features & Contributions:</h4>
+              <ul class="features-list">
+                <li *ngFor="let feature of project.features" class="feature-item">
+                  <span class="feature-bullet"></span>
+                  <span>{{ feature }}</span>
+                </li>
+              </ul>
+
+              <div class="project-actions mt-6">
+                <button mat-stroked-button (click)="openGithub(project.githubUrl)" *ngIf="project.githubUrl">
+                  <mat-icon>code</mat-icon>
+                  View Code
+                </button>
+                <button mat-stroked-button (click)="openDemo(project.demoUrl)" *ngIf="project.demoUrl">
+                  <mat-icon>launch</mat-icon>
+                  Live Demo
+                </button>
+              </div>
+
+              <div class="project-highlights mt-6">
+                <div class="highlights-grid">
+                  <div class="highlight-card">
+                    <h5 class="highlight-title">Technical Highlights</h5>
+                    <ul class="highlight-list">
+                      <li>• Angular reactive forms implementation</li>
+                      <li>• Component-based architecture</li>
+                      <li>• RxJS state management</li>
+                      <li>• Responsive design principles</li>
+                    </ul>
+                  </div>
+                  <div class="highlight-card">
+                    <h5 class="highlight-title">Project Outcomes</h5>
+                    <ul class="highlight-list">
+                      <li>• Improved user interface consistency</li>
+                      <li>• Enhanced data visualization</li>
+                      <li>• Streamlined admin workflows</li>
+                      <li>• Maintainable and scalable codebase</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </section>

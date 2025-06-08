@@ -1,0 +1,22 @@
+  <section class="contact-info-section">
+      <div class="container">
+        <div class="contact-items" *ngIf="contactInfo">
+          <div class="contact-item">
+            <mat-icon>phone</mat-icon>
+            <span>{{ contactInfo.phone }}</span>
+          </div>
+          <div class="contact-item">
+            <mat-icon>email</mat-icon>
+            <span>{{ contactInfo.email }}</span>
+          </div>
+          <div class="contact-item">
+            <mat-icon>work</mat-icon>
+            <span>{{ contactInfo.linkedin }}</span>
+          </div>
+          <div class="contact-item clickable" (click)="openGithub()">
+            <mat-icon>code</mat-icon>
+            <span>{{ contactInfo.github }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
