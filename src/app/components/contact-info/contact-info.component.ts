@@ -24,7 +24,7 @@ export class ContactInfoComponent {
   }
 
   openGithub() {
-    window.open("https://github.com/shubhambawa", "_blank")
+    window.open("https://github.com/bawashubham", "_blank")
   }
 
 }
